@@ -1,0 +1,179 @@
+import express from "express";
+
+import cors from "cors";
+
+import "dotenv/config";
+
+const app = express();
+
+const port = process.env.PORT || 3000;
+
+app.use(cors());
+
+app.use(express.json());
+
+app.listen(port, () => {
+
+  console.log(`Server is running on http://localhost:${port}`);
+
+});
+
+{
+
+  "name": "cartproducts",
+
+  "version": "1.0.0",
+
+  "description": "",
+
+  "main": "index.js",
+
+  "type": "module",
+
+  "scripts": {
+
+    "dev": "nodemon server.js",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+
+  "keywords": [],
+
+  "author": "",
+
+  "license": "ISC",
+
+  "dependencies": {
+
+    "cors": "^2.8.5",
+
+    "dotenv": "^16.4.7",
+
+    "express": "^4.21.2"
+ }
+}
+========================================================
+const User = {
+
+  id,
+
+  name,
+
+  email,
+
+  password,
+
+  cart,
+
+};
+
+const Cart = {
+
+  id,
+
+  total,
+
+  products,
+
+  quantity,
+
+};
+
+const Product = {
+
+  name,
+
+  quantity,
+
+  price,
+
+  dateAdded,
+
+};
+===============================================
+const User = {
+
+  id,
+
+  name,
+
+  email,
+
+  password,
+
+  cart,
+
+};
+
+ 
+
+const Cart = {
+
+  id,
+
+  total,
+
+  products,
+
+  quantity,
+
+};
+
+ 
+
+const Product = {
+
+  id,
+
+  name,
+
+  quantity,
+
+  price,
+
+  dateAdded,
+
+};
+
+ 
+
+ 
+
+api
+
+ 
+
+/users
+
+/users/all  /GET
+
+/users/:id  /GET
+
+ 
+
+/auth
+
+/auth/register         /POST
+
+/auth/login            /POST
+
+*/auth/reset-password  /POST
+
+ 
+
+/cart
+
+/cart/:id                         /GET
+
+/cart/:userid/product             /POST
+
+/cart/:userid/product/:productId  /DELETE
+
+/cart/products/:id                /GET 
+
+ 
+
+/products 
+
+/products/:id /GET
